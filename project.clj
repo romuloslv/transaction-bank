@@ -12,8 +12,8 @@
                  [http-kit "2.3.0"]
                  [clj-time "0.14.0"]
                  [midje	"1.9.6"]]
-  :plugins	[[lein-midje	"3.2.1"]
-             [lein-cloverage	"1.0.13"]]
+  :plugins	[[lein-midje "3.2.1"]
+             [lein-cloverage "1.0.13"]]
   :main ^:skip-aot transaction-bank.core
   :target-path "target/%s"
   :profiles {:uberjar {:aot :all}})
