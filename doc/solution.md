@@ -55,3 +55,7 @@ You can run all project tests with the command:
     $ tail -f resources/output.json
 ```
 And a report with all results will be automatically displayed.
+
+## Example
+
+![](https://i.imgur.com/6UAn9Yo.png)
