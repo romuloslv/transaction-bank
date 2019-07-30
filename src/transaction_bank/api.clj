@@ -8,7 +8,7 @@
         limit (.setScale (new BigDecimal (str (get request "limit"))) 2)
         denylist (get request "denylist")
         merchant (get request "merchant")
-	      amount (.setScale (new BigDecimal (str (get request "amount"))) 2)
-	      timestamp (.format (java.text.SimpleDateFormat. "yyyy-MM-dd HH:mm:ss")
+	amount (.setScale (new BigDecimal (str (get request "amount"))) 2)
+	timestamp (.format (java.text.SimpleDateFormat. "yyyy-MM-dd HH:mm:ss")
                   (new java.util.Date))]
   (card/rules card-status limit denylist merchant amount timestamp)))
