@@ -1,0 +1,15 @@
+{
+        "cardIsActive":"true",
+        "limit":"1300",
+        "denylist":[
+          "Posto",
+          "Farmacia",
+          "Mercado"
+        ],
+        "merchant":"Padaria",
+        "amount":"44",
+        "time":"00:00:00",
+        "list":[
+          ""
+        ]
+}
