@@ -36,8 +36,8 @@
 
 (defn current-acumulator
   "Calculates initial values ​​based on transaction-bank/resources/transactions.json file entry"
-	[limit amount count-erro]
-	(if (zero? count-erro)
+  [limit amount count-erro]
+  (if (zero? count-erro)
     (if (> acumulator 0)
       (rescue acumulator amount)
       (rescue limit amount))
@@ -107,7 +107,7 @@
     (status-code 50))
 
   (if (and (empty? @all-transactions)
-        (false? (<= (bigdec amount) (* 0.9 (bigdec limit)))))
+           (false? (<= (bigdec amount) (* 0.9 (bigdec limit)))))
     (status-code 60))
 
   (if (.contains (comparation) merchant)
