@@ -2,7 +2,7 @@
 
 operation() {
   json=$PWD/resources/request/transactions.json
-  echo -e "Sending request: \n\n$(cat $json)\n"
+  echo "Sending request: \n\n$(cat $json)\n"
 	response=$(curl -X POST -d @"$json" localhost:3003/transactions --header "Content-Type:application/json";)
 }
 
