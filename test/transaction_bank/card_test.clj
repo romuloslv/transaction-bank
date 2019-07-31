@@ -4,11 +4,11 @@
             [transaction-bank.card :refer :all]))
 
 (fact "Test current-acumulator"
-  (current-acumulator 6100 0 1)  => 6100)
+  (current-acumulator 6100 0 1) => 6100)
 
 (fact "Test rules"
   (rules "true" 6100 ["Padaria" "Farmacia" "Mercado"]
-         "Posto" 300 "2019-07-29 20:49:55")  => [])
+         "Posto" 300 "2019-07-29 20:49:55") => [])
 
 (fact "Find how many merchants exceed the rules limit"
   (loop [x 0]
@@ -22,24 +22,24 @@
   (reset! all-transactions []))
 
 (fact "Recalculated limit basead in error"
-  (current-acumulator 5800 1456 5)  => 5800
-  (current-acumulator 5800 1370 0)  => 4430)
+  (current-acumulator 5800 1456 5) => 5800
+  (current-acumulator 5800 1370 0) => 4430)
 
 (fact "Recalculated limit"
   (def amount 430)
-  (rescue acumulator amount)  => 4000)
+  (rescue acumulator amount) => 4000)
 
 (fact "Test rules"
   (rules "false" 0 ["Padaria" "Farmacia" "Mercado"]
-         "Farmacia" 20 "2019-07-29 20:49:55")  => [])
+         "Farmacia" 20 "2019-07-29 20:49:55") => [])
 
 (fact "Test rules"
   (rules "false" 10 ["Padaria" "Farmacia" "Mercado"]
-         "Farmacia" 20 "2019-07-29 20:49:55")  => [])
+         "Farmacia" 20 "2019-07-29 20:49:55") => [])
 
 (fact "Test rules"
   (rules "false" 100 ["Padaria" "Farmacia" "Mercado"]
-         "Farmacia" 20 "2019-07-29 20:49:55")  => [])
+         "Farmacia" 20 "2019-07-29 20:49:55") => [])
 
 (fact "Test limit merchant"
   (loop [x 0]
@@ -55,7 +55,7 @@
   (def out {:merchant "Padaria"
             :timestamp "2019-07-29 18:13:52"
             :millisecond (now)})
-  (moment "Padaria" "2019-07-29 18:13:52")	=>	[out]
+  (moment "Padaria" "2019-07-29 18:13:52") => [out]
   (reset! all-transactions []))
 
 (facts "Tests defined by the execution rules"
